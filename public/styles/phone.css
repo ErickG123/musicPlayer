@@ -1,0 +1,58 @@
+.cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: 85%;
+    border: 3px solid #ececec;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(255, 255, 255, 0.616) 0px 3px 8px;
+}
+
+.camera {
+    width: 70%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front_cam {
+    width: 6px;
+    height: 6px;
+    background-color: #ececec;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.front_audio {
+    width: 40px;
+    height: 6px;
+    background-color: #ececec;
+    border-radius: 10px;
+}
+
+.screen {
+    width: 75%;
+    height: 100%;
+    background: linear-gradient(150deg, #fd6095 0%, #c589ca 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cell_button {
+    width: 70%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_button {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ececec;
+    border-radius: 50%;
+}

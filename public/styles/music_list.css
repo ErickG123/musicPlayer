@@ -1,0 +1,77 @@
+.music_list {
+    width: 50%;
+    height: 100%;
+}
+
+.music_slide {
+    width: 100%;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.music_item {
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 3px solid #ececec;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px;
+}
+
+.music_item_image {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_item_image img {
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.music_playning {
+    animation: rotateAlbumArt 5s linear 0s infinite forwards;
+}
+
+@keyframes rotateAlbumArt {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    100% {
+        transform: rotateZ(-360deg);
+    }
+}
+
+.music_item_infos {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.music_item_singer {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.music_item_title {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.music_item_player {
+    font-size: 40px;
+}
+
+.music_item_player:hover {
+    cursor: pointer;
+}

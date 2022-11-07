@@ -1,0 +1,109 @@
+.music_image {
+    margin: 30px 30px 0px 30px;
+    height: 45%;
+}
+
+.music_image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.music_infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.music_singer {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.music_title {
+    font-weight: 400;
+}
+
+.audio_controllers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 35px;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.audio_controllers i {
+    cursor: pointer;
+}
+
+.play_button {
+    margin: 0px 40px;
+    font-size: 40px;
+}
+
+.progress_area {
+    height: 6px;
+    width: 80%;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.progress_area .progress_bar {
+    height: inherit;
+    width: 0%;
+    position: relative;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #ff508a 0%, #995a9f 100%);
+}
+
+.progress_bar::before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: inherit;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    background: inherit;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.progress_area:hover .progress_bar::before {
+    opacity: 1;
+}
+
+.progress_area .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+.timer span {
+    font-size: 13px;
+    color: white;
+}
+
+.more_options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0px 0px 0px;
+    width: 80%;
+    height: 10%;
+    color: white;
+    font-size: 15px;
+}
+
+.more_options i {
+    cursor: pointer;
+}

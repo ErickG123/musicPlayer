@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="./public/styles/main.css">
+    <link rel="stylesheet" href="./public/styles/phone.css">
+    <link rel="stylesheet" href="./public/styles/player.css">
+    <link rel="stylesheet" href="./public/styles/music_list.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <script src="https://kit.fontawesome.com/07c4c23a8d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="container">
+        <div class="music_player">
+            <div class="cell">
+                <div class="camera">
+                    <div class="front_cam"></div>
+                    <div class="front_audio"></div>
+                </div>
+                <div class="screen">
+                    <div class="music_image">
+                        <img src="" alt="music image">
+                    </div>
+                    <div class="music_infos">
+                        <p class="music_singer"></p>
+                        <p class="music_title"></p>
+                    </div>
+                    <div class="audio_controllers">
+                        <i id="backward" class="fa-solid fa-backward-step"></i>
+                        <div class="play_pause">
+                            <i class="fa-solid fa-play play_button" data-id-cell=""></i>
+                        </div>
+                        <i id="forward" class="fa-solid fa-forward-step"></i>
+                    </div>
+                    <div class="progress_area">
+                        <div class="progress_bar"></div>
+                        <div class="timer">
+                            <span class="current">0:00</span>
+                            <span class="duration"></span>
+                        </div>
+                        <audio id="main_audio" src=""></audio>
+                    </div>
+                    <div class="more_options">
+                        <i id="shuffle" class="fa-solid fa-shuffle"></i>
+                        <i id="favorite" class="fa-solid fa-heart"></i>
+                        <i id="repeat" class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+                </div>
+                <div class="cell_button">
+                    <div class="home_button"></div>
+                </div>
+            </div>
+        </div>
+        <div class="music_list swiper mySwiper">
+            <div class="music_slide swiper-wrapper">
+                <div class="music_item swiper-slide">
+                    <div class="music_item_image">
+                        <img src="./assets/images/music_1.jpg" alt="playlist image" data-image="1">
+                    </div>
+                    <div class="music_item_infos">
+                        <p class="music_item_singer">Ed Sheeran 1</p>
+                        <p class="music_item_title">Celestial</p>
+                    </div>
+                    <div class="music_item_player">
+                        <i class="fa-solid fa-play music_item_play_button" data-id="1"></i>
+                    </div>
+                </div>
+                <div class="music_item swiper-slide">
+                    <div class="music_item_image">
+                        <img src="./assets/images/music_2.jpg" alt="playlist image" data-image="2">
+                    </div>
+                    <div class="music_item_infos">
+                        <p class="music_item_singer">Ed Sheeran 2</p>
+                        <p class="music_item_title">Perfect</p>
+                    </div>
+                    <div class="music_item_player">
+                        <i class="fa-solid fa-play music_item_play_button" data-id="2"></i>
+                    </div>
+                </div>
+                <div class="music_item swiper-slide">
+                    <div class="music_item_image">
+                        <img src="./assets/images/music_3.jpg" alt="playlist image" data-image="3">
+                    </div>
+                    <div class="music_item_infos">
+                        <p class="music_item_singer">Ed Sheeran 3</p>
+                        <p class="music_item_title">Shivers</p>
+                    </div>
+                    <div class="music_item_player">
+                        <i class="fa-solid fa-play music_item_play_button" data-id="3"></i>
+                    </div>
+                </div>
+                <div class="music_item swiper-slide">
+                    <div class="music_item_image">
+                        <img src="./assets/images/music_4.jpg" alt="playlist image" data-image="4">
+                    </div>
+                    <div class="music_item_infos">
+                        <p class="music_item_singer">Ed Sheeran 4</p>
+                        <p class="music_item_title">Shape of You</p>
+                    </div>
+                    <div class="music_item_player">
+                        <i class="fa-solid fa-play music_item_play_button" data-id="4"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+
+    <script src="./public/scripts/music_list.js"></script>
+    <script src="./public/scripts/main.js"></script>
+
+    <script type="module" src="./public/scripts/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
