@@ -9,7 +9,7 @@ var swiper = new Swiper(".mySwiper", {
     }
 });
 
-function updatePlayButtonPlaylist(button) {
+function updatePlayButtonPlaylistPlay(button) {
     button.classList.add("paused");
     button.classList.remove("fa-play");
     button.classList.add("fa-pause");
@@ -17,7 +17,7 @@ function updatePlayButtonPlaylist(button) {
     getPlaylistImages("play");
 }
 
-function updatePauseButtonPlaylist(button) {
+function updatePauseButtonPlaylistPause(button) {
     button.classList.remove("paused");
     button.classList.remove("fa-pause");
     button.classList.add("fa-play");
@@ -26,12 +26,12 @@ function updatePauseButtonPlaylist(button) {
 }
 
 function playMusicInPlaylist(button) {
-    updatePlayButtonPlaylist(button);
+    updatePlayButtonPlaylistPlay(button);
     playMusic();
 }
 
 function pauseMusicInPlaylist(button) {
-    updatePauseButtonPlaylist(button);
+    updatePauseButtonPlaylistPause(button);
     pauseMusic();
 }
 
@@ -44,9 +44,9 @@ function updatePlaylist(musicPlayning) {
         const buttonId = button.getAttribute("data-id");
 
         if (buttonId == musicPlayning) {
-            updatePlayButtonPlaylist(button);
+            updatePlayButtonPlaylistPlay(button);
         } else {
-            updatePauseButtonPlaylist(button);
+            updatePauseButtonPlaylistPause(button);
         }
     });
 }

@@ -92,9 +92,21 @@ function pauseMusic() {
     mainAudio.pause();
 }
 
+function updatePlaylistNextPrevButton() {
+    images.forEach(image => {
+        image.classList.remove("music_playning");
+    });
+
+    buttons.forEach(button => {
+        button.classList.remove("fa-pause");
+        button.classList.add("fa-play");
+    });
+}
+
 function nextMusic() {
     musicIndex++;
     musicIndex > allMusic.length ? musicIndex = 1 : musicIndex = musicIndex;
+    updatePlaylistNextPrevButton();
     loadMusic(musicIndex);
     playMusic();
 }
@@ -102,6 +114,7 @@ function nextMusic() {
 function prevMusic() {
     musicIndex--;
     musicIndex < 1 ? musicIndex = allMusic.length : musicIndex = musicIndex;
+    updatePlaylistNextPrevButton();
     loadMusic(musicIndex);
     playMusic();
 }
@@ -113,6 +126,7 @@ function updateDataIdCell(indexNumb) {
 
 playPauseBtn.addEventListener("click", () => {
     const isMusicPaused = musicPlayer.classList.contains("paused");
+    updatePlaylistNextPrevButton();
     isMusicPaused ? pauseMusic() : playMusic();
 });
 
@@ -170,6 +184,7 @@ repeatBtn.addEventListener("click", () => {
 
         mainAudio.addEventListener("ended", () => {
             mainAudio.currentTime = 0;
+            updatePlaylistNextPrevButton();
             loadMusic(musicIndex);
             playMusic();
         });
@@ -193,6 +208,7 @@ shuffleBtn.addEventListener("click", () => {
             } while (musicIndex == randIndex);
 
             musicIndex = randIndex;
+            updatePlaylistNextPrevButton();
             loadMusic(musicIndex);
             playMusic();
         })
